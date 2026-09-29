@@ -1,0 +1,31 @@
+@model List<MySite.Models.TrainingApproach>
+
+<section class="approach" id="approach">
+    <div class="section-heading">
+        <p class="section-tag">Approach</p>
+        <h3>How I train and compete</h3>
+    </div>
+
+    <div class="feature-grid">
+        @foreach (var approach in Model)
+        {
+            <div class="feature-card">
+                <span class="feature-icon">@Html.Raw(approach.Icon)</span>
+                <h4>@approach.Title</h4>
+                <p>@approach.Description</p>
+            </div>
+        }
+    </div>
+
+    <div class="about-panel" style="margin-top: 38px;">
+        <div class="panel-copy">
+            <p class="section-tag">About Amir</p>
+            <h3>Discipline is the real weapon.</h3>
+            <p>
+                Chess has shaped my life through patience, focus, and the constant search for improvement.
+                I enjoy competing in high-pressure situations and guiding others through the same process of
+                thinking deeply, staying calm, and making principled decisions on the board.
+            </p>
+        </div>
+    </div>
+</section>

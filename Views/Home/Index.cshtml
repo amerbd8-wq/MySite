@@ -1,0 +1,44 @@
+@model MySite.Models.Portfolio
+
+<section class="hero" id="about">
+    <div class="hero-copy">
+        <p class="section-tag">@Model.Title</p>
+        <h2>@Model.Bio</h2>
+        <p class="lede">
+            I’m @Model.Name — a serious chess competitor, tactician, and student of the game.
+            My work is built on deep preparation, accurate calculation, and a passion for
+            turning complex positions into clear plans.
+        </p>
+
+        <div class="cta-row">
+            <a class="btn btn-primary" asp-action="Contact">Book a Session</a>
+            <a class="btn btn-secondary" asp-action="Results">View Results</a>
+        </div>
+
+        <ul class="quick-stats" aria-label="Key chess statistics">
+            <li>
+                <strong>@Model.Rating</strong>
+                <span>Rated Strength</span>
+            </li>
+            <li>
+                <strong>@Model.Experience</strong>
+                <span>Competitive Play</span>
+            </li>
+            <li>
+                <strong>@Model.TournamentsPlayed+</strong>
+                <span>Tournaments</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="hero-visual" aria-label="Decorative chess board illustration">
+        <div class="board-frame">
+            <div class="board-grid">
+                @for (int i = 0; i < 64; i++)
+                {
+                    <span class="@((i + i / 8) % 2 == 0 ? "light" : "dark")"></span>
+                }
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amir | Chess Portfolio</title>
+    <meta name="description" content="Amir is a master chess player, strategist, and coach with a deep passion for competition, training, and the game of chess." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand-wrap">
+                <div class="brand-mark">A</div>
+                <div>
+                    <p class="eyebrow">Chess Portfolio</p>
+                    <h1>Amir</h1>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a asp-action="Index" asp-controller="Home">Home</a>
+                <a asp-action="Results" asp-controller="Home">Results</a>
+                <a asp-action="Approach" asp-controller="Home">Approach</a>
+                <a asp-action="Contact" asp-controller="Home">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <footer class="site-footer">
+            <div>
+                <p class="section-tag">Contact</p>
+                <h3>Let’s play, train, or collaborate.</h3>
+            </div>
+            <div class="contact-box">
+                <p>Email: <a href="mailto:amirchess@example.com">amirchess@example.com</a></p>
+                <p>Instagram: <a href="https://instagram.com" target="_blank" rel="noreferrer">@amirchess</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/js/script.js"></script>
+</body>
+</html>

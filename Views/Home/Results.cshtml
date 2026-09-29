@@ -1,0 +1,19 @@
+@model List<MySite.Models.TournamentResult>
+
+<section class="results" id="results">
+    <div class="section-heading">
+        <p class="section-tag">Tournament Results</p>
+        <h3>Competitive highlights</h3>
+    </div>
+
+    <div class="results-grid">
+        @foreach (var result in Model)
+        {
+            <article class="result-card @(result.IsFeatured ? "featured" : "")">
+                <span class="result-year">@result.Year</span>
+                <h4>@result.Title</h4>
+                <p>@result.Description</p>
+            </article>
+        }
+    </div>
+</section>

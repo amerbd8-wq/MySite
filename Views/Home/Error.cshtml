@@ -1,0 +1,10 @@
+@model ErrorViewModel
+
+<div class="error-container">
+    <h2>An error occurred</h2>
+    <p>Sorry, something went wrong.</p>
+    @if (Model?.ShowRequestId ?? false)
+    {
+        <p>Request ID: @Model.RequestId</p>
+    }
+</div>
